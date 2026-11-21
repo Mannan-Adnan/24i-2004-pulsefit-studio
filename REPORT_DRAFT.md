@@ -1,17 +1,15 @@
 # CS4032 Assignment 02 Report: PulseFit Studio
-> Draft. Fill in the _italic_ parts, add screenshots where it says 📷, then export to PDF.
-> This file is a working draft. Don't submit it as-is.
 
 ## 1. Student and project details
 | | |
 |---|---|
 | Name | Mannan bin Adnan |
 | Roll number | 24I-2004 |
-| Section | _X_ |
+| Section | CY-A |
 | Business name | PulseFit Studio |
-| Repository | _https://github.com/..._ |
-| Deployment | _https://....vercel.app_ |
-| Final commit hash | _run `git rev-parse HEAD`_ |
+| Repository | https://github.com/Mannan-Adnan/24i-2004-pulsefit-studio |
+| Deployment | https://24i-2004-pulsefit-studio.vercel.app |
+| Final commit hash | 24de5c5cfd4e69ec123dd54ae7d8e6a7ae6c7422 |
 
 ## 2. Business profile
 | Element | Detail |

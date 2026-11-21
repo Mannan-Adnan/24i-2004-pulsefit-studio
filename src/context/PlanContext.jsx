@@ -74,6 +74,8 @@ export function PlanProvider({ children }) {
   }
 
   function retry() {
+    // Demo: Retry also turns off "Simulate loading failure", as if the connection came back.
+    setDemo((prev) => ({ ...prev, failLoading: false }));
     setReloadCount((count) => count + 1);
   }
 

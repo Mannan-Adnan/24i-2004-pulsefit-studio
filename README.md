@@ -1,7 +1,7 @@
 # PulseFit Studio: Fitness Class Booking (CS4032 Assignment 02)
 
-**Student:** Mannan bin Adnan · 24I-2004 · _Section_
-**GitHub:** _add repository link_ · **Live site:** _add deployment link_
+**Student:** Mannan bin Adnan · 24I-2004 · Section CY-A
+**GitHub:** https://github.com/Mannan-Adnan/24i-2004-pulsefit-studio · **Live site:** https://24i-2004-pulsefit-studio.vercel.app
 
 ## Description
 PulseFit Studio is a fictional group-fitness studio in F-10 Markaz, Islamabad, for working adults and students. Users can browse the weekly timetable, search and filter it, open a class, build a plan of classes with 1–4 spots each, enter their details and confirm a **simulated** booking. No account is needed.
@@ -47,7 +47,7 @@ Requires Node.js 20 or newer.
 All demo controls are on the **Home page** under "Demo controls".
 | Case | How to reproduce |
 |---|---|
-| Loading failure | Tick "Simulate loading failure" → open Classes → error message. Untick it → press **Retry** |
+| Loading failure | Tick "Simulate loading failure" → open Classes → error message → press **Retry** → data loads (Retry also switches the simulation off) |
 | Empty dataset | Tick "Simulate empty timetable" → Classes shows "No classes are scheduled this week" |
 | No search matches | Search `xyz` → "No classes match your filters" with a **Show all classes** button |
 | Invalid URL | Open `/classes/abc` or `/anything` |
