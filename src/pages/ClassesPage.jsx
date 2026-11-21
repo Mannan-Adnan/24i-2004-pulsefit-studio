@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { usePlan } from '../context/PlanContext.jsx';
 import { CLASS_TYPES, DAYS, DAY_NAMES, LEVELS } from '../data/classes.js';
@@ -28,10 +29,26 @@ export default function ClassesPage() {
     );
   }
 
+  // The search box keeps its own text so every key shows instantly.
+  // (The URL updates a moment later, so reading the box straight from the URL
+  // could drop letters when typing fast.)
+  const [searchText, setSearchText] = useState(search);
+
+  // When the URL changes from somewhere else (Back button, "Show all classes"),
+  // copy the new search into the box.
+  useEffect(() => {
+    setSearchText(search);
+  }, [search]);
+
+  function handleSearchChange(event) {
+    setSearchText(event.target.value);
+    updateParam('q', event.target.value, '');
+  }
+
   if (status !== 'ready') return <DataStatus />;
 
   // 1. search  2. filter  3. sort  - all work together
-  const text = search.trim().toLowerCase();
+  const text = searchText.trim().toLowerCase();
   const filtered = sessions.filter((session) => {
     const matchesSearch =
       session.title.toLowerCase().includes(text) ||
@@ -61,8 +78,8 @@ export default function ClassesPage() {
             id="search"
             type="search"
             placeholder="Class, type or instructor"
-            value={search}
-            onChange={(event) => updateParam('q', event.target.value, '')}
+            value={searchText}
+            onChange={handleSearchChange}
           />
         </div>
         <div className="field">
